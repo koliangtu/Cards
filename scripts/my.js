@@ -28,6 +28,7 @@ firstPos();
 
 function firstPos(){
 if($( "li" ).length>1)$( "li" ).last().css( "left", "60px" );
+$( "span" ).each(function( index ) { $( this ).html(index+1) ;});
 }
 
 $(window).on('popstate',function(event) {
