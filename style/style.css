@@ -42,15 +42,9 @@ top:50%;
 .numberCircle {
     border-radius: 50%;
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
-
-    width: 80px;
-    height: 80px;
-    padding: 15px;
-    
+    padding: 15px 25px 15px 25px;
     background: #fff;
     border: 3px solid black;
- 
-    
     font: 32px Arial, sans-serif;
 }
 
