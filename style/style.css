@@ -55,3 +55,9 @@ top:50%;
 
 ul{padding:0px;}
 .wide:last-child {width:100%; max-width:960px;}
+.item:last-child{
+    margin-left:60px;
+}
+.item:first-child {
+    margin-left: 0;
+}
