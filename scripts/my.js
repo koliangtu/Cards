@@ -1,4 +1,4 @@
-﻿var template;
+var template;
 
 $( document ).ready(function() {
 
@@ -10,16 +10,14 @@ $( document ).ready(function() {
     if (event.altKey) {
        if(event.shiftKey){
           cards.push({type: 'wide'});
-         	$('.updates').append( template([{type: 'wide'}]) );
        }else{
-          cards.push({type: 'wide'});
-       		$('.updates').append( template([{type: 'narrow'}]) );
+          cards.push({type: 'narrow'});
        }
     }else{
     	  cards.pop();
     }
-    History.pushState(cards);
     loadContent();
+    History.pushState(cards);
   });
 
 
@@ -35,9 +33,9 @@ $('.updates').html( template(cards) );
 (function(window,undefined){
 
 History.Adapter.bind(window,'statechange',function(){
-          // var State = History.getState(); 
-          //cards = State.data;
-          //loadContent();
+           var State = History.getState(); 
+          cards = State.data;
+          loadContent();
     });
 })(window);
 
