@@ -2,7 +2,6 @@ var template;
 
 $( document ).ready(function() {
 
-
   template = Handlebars.compile( $('#template').html() );
   loadContent();
 
@@ -20,18 +19,14 @@ $( document ).ready(function() {
     History.pushState(cards);
   });
 
-
 });
 
 function loadContent(){
-
 $('.updates').html( template(cards) );
-
 }
 
 
 (function(window,undefined){
-
 History.Adapter.bind(window,'statechange',function(){
            var State = History.getState(); 
           cards = State.data;
